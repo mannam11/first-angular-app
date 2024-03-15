@@ -1,0 +1,13 @@
+<div class="product-container">
+  <div class="product-card">
+    <img [src]="products.image">
+    <div class="product-details">
+      <h3 class="product-title">{{ products.title }}</h3>
+      <p class="product-category">{{ products.category }}</p>
+      <p class="product-description">{{ products.description }}</p>
+      <p class="product-price">${{ products.price }}</p>
+      <button class="product-button">Add to Cart</button>
+    </div>
+  </div>
+  <!-- Repeat for other product cards -->
+</div>

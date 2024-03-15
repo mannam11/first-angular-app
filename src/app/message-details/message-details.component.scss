@@ -1,0 +1,31 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+  }
+   
+  .name-container,
+  .email-container,
+  .description-container {
+    margin-bottom: 10px;
+  }
+  
+  .name-container h3,
+  .email-container p,
+  .description-container p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .email-container p {
+    margin-top: 5px;
+  }
+  
+  .email-container span,
+  .description-container span {
+    display: block;
+  }
+  

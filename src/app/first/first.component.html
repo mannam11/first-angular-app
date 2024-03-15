@@ -1,0 +1,42 @@
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()">
+
+      <label class="form-label" for="name">Name</label>
+      <input class="form-input" type="text" id="name" [(ngModel)]="name" name="name">
+  
+      <label class="form-label" for="email">Email</label>
+      <input class="form-input" type="email" id="email" [(ngModel)]="email" name="email">
+  
+      <label class="form-label" for="description">Description</label>
+      <textarea class="form-input" id="description" [(ngModel)]="description" name="description"></textarea>
+  
+      <input class="form-submit" type="submit" value="Submit">
+    </form>
+
+    <div class="flex-container" *ngIf="isSubmitted">
+        <app-message-details *ngFor="let msg of messages; let i = index" [message]="msg" [index]="i"
+        (delete)="deleteEntry($event)">
+
+        </app-message-details>
+    </div>
+
+    <!-- <div>
+        <table *ngIf="isSubmitted">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let msg of messages">
+                    <td>{{ msg.name }}</td>
+                    <td>{{ msg.email }}</td>
+                    <td>{{ msg.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+  </div>
